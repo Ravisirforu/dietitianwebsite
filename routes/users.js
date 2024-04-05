@@ -12,7 +12,7 @@ const connectDB = async () => {
     }
 }
 
-connectDB();
+// connectDB();
 
 const userSchema = new mongoose.Schema({
     username:{
