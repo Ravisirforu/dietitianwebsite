@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mithra Homes </title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 
 </head>
@@ -27,13 +29,20 @@
         width: 50%;
         height: 100%;
     }
-
+    nav .right ul li a {
+        transition: color 0.5s ease, transform 0.5s ease;
+    }
+    nav .right ul li a:hover {
+        color: #50C878;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
     .login-bg-img {
         width: 50%;
     }
 
     .back-button {
-        background-color: #007BFF;
+        background-color: #50C878;
         color: white;
         padding: 8px;
         border: none;
@@ -50,16 +59,16 @@
             background-image: url('/images/hotel2/hotel2img2.jpeg');
             background-size: cover;
             background-position: center;
-            color: #fff;
+            
         }
 
         .login-page-left h2 {
-            color: #fff;
-            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
+            color: #50C878;
+            text-shadow: 1px 3px 4px #54df82;
         }
 
         .login-page-left label {
-            color: #fff;
+            color: #50C878;
         }
 
         .login-page-right {
@@ -91,13 +100,26 @@
 <body>
     <!-- <button class="back-button" onclick="window.history.back()">
         << Go Back</button> -->
-    <button class="back-button">
-        <a href="/">
-            << Home</a>
-    </button>
+        <nav class="flex items-center justify-between px-6 py-3 border-b-2">
+
+            <div class="left">
+                <a href="/"><img class="h-[75px] object-cover" src="/images/baba shivbramhiji.png" alt=""></a>
+            </div>
+            <div class="right">
+                <ul class="flex gap-6 items-center  ">
+                    <li class="text-[#333333] font-bold"><a href="/">Home</a></li>
+                    <li class="text-[#333333] font-bold"><a href="/" id="about-btn">About</a></li>
+                    <li class="text-[#333333] font-bold"><a href="/gallery">Gallery</a></li>
+                    <li class="text-[#333333] font-bold"><a href="/contact">Contact</a></li>
+                    <li class="text-[#333333] font-bold"><a href="/login">Login</a></li>
+                    <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
+                </ul>
+            </div>
+
+        </nav>
     <div class=" login-page flex w-full h-screen  ">
         <div class="login-page-left bg-white p-8 rounded shadow-md flex flex-col items-center justify-center ">
-            <h2 class="text-2xl font-bold mb-8 text-blue-500 w-full text-center">Login To Your Account</h2>
+            <h2 class="text-2xl text-[#50C878] font-bold mb-8  w-full text-center">Login To Your Account</h2>
             <form class="w-full" action="/login" method="POST">
                 <% if (error && error.length> 0) { %>
                     <p class="flash-error"
@@ -118,18 +140,18 @@
                                 required>
                         </div>
                         <button type="submit"
-                            class="w-full py-2 px-4 border border-transparent rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-700 transition duration-150 ease-in-out">Login</button>
+                            class="w-full py-2 px-4 border border-transparent rounded-md text-white bg-[#50C878] hover:bg-[#50C878] focus:bg-[#50C878] active:bg-[#50C878] transition duration-150 ease-in-out">Login</button>
             </form>
-            <a class="mt-3 text-sm hover:text-blue-600 " style="text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);" href="/register">New User
+            <a class="mt-3 text-sm hover:text-[#50C878] " style="text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);" href="/register">New User
                 ? Register to your
                 account
             </a>
         </div>
         <div class="login-page-right login-bg-img" style="position: relative;">
-            <img src="/images/hotel2/hotel2img2.jpeg" alt="login" class=" w-full h-full object-cover">
+            <img src="/images/heroimg1.png" alt="login" class=" w-full h-full object-cover">
             <h1 class="text-white font-bold "
                 style="position: absolute; top: 40%;left: 5%;width: 60%;font-size: 25px;text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);">
-                WELCOME TO MITHRA'S HOMES</h1>
+              </h1>
         </div>
     </div>
 

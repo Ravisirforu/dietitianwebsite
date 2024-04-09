@@ -15,7 +15,6 @@
 </head>
 <style>
     @keyframes bounce {
-
         0%,
         20%,
         50%,
@@ -23,16 +22,21 @@
         100% {
             transform: translateY(0);
         }
-
         40% {
             transform: translateY(-30px);
         }
-
         60% {
             transform: translateY(-15px);
         }
     }
-
+    nav .right ul li a {
+        transition: color 0.5s ease, transform 0.5s ease;
+    }
+    nav .right ul li a:hover {
+        color: #50C878;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
     .bounce {
         animation: bounce 2s infinite;
     }
@@ -65,10 +69,10 @@
         <div class="contact-content">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Contact Us</h1>
             <div class="flex flex-col md:flex-row justify-center items-center">
-                <div class="left md:w-1/2 text-white px-4">
+                <div class="left md:w-1/2  text-white px-4">
                     <h3 class="text-lg md:text-xl mb-4">Feel free to contact us for any queries or feedback👋</h3>
-                    <div class="bg-white p-4 rounded-md">
-                        <form action="/contact" method="POST" class="flex flex-col gap-4">
+                    <div class="bg-white h-80 p-4 rounded-md">
+                        <form action="/contact" method="POST" class="flex flex-col  gap-8">
                             <input type="text" name="name" placeholder="Your Name" class="p-2 border rounded-md"
                                 required>
                             <input type="email" name="email" placeholder="Your Email" class="p-2 border rounded-md"
@@ -76,7 +80,7 @@
                             <textarea name="message" placeholder="Your Message" class="p-2 border rounded-md"
                                 required></textarea>
                             <button type="submit"
-                                class="p-2 bg-[#d89312] font-semibold text-white rounded-md hover:bg-blue-800 transition-colors">Send</button>
+                                class="p-2 bg-[#5fff94] font-semibold text-white rounded-md hover:bg-[#50C878] transition-colors">Send</button>
                         </form>
                     </div>
                 </div>
