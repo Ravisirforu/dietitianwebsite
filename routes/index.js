@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 
 router.get('/',async (req,res)=>{
   const admin = await userModel.findOne({ role: 'admin' });
-
     res.render('index',{admin});
 })  
 router.get('/gallery',(req,res)=>{

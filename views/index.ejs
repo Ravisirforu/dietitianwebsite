@@ -14,12 +14,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 </head>
+
 <style>
     .swiper {
         width: 100%;
         height: 100%;
     }
-
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -28,7 +28,6 @@
         justify-content: center;
         align-items: center;
     }
-
     .swiper-slide::after {
         content: "";
         display: block;
@@ -40,14 +39,12 @@
         background-color: #494949;
         opacity: 0.4;
     }
-
     .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
     @keyframes bounce {
 
         0%,
@@ -66,21 +63,17 @@
             transform: translateY(-15px);
         }
     }
-
     .bounce {
         animation: bounce 2s infinite;
     }
-
     .active-button {
         background-color: #F49C08 !important;
 
         transition: all ease 0.5s;
     }
-
     nav .right ul li a {
         transition: color 0.5s ease, transform 0.5s ease;
     }
-
     nav .right ul li a:hover {
         color: #50C878;
         transform: scale(1.1);
@@ -89,8 +82,9 @@
 </style>
 
 <body>
-    <div class="main">
+<div class="main">
         <nav class="flex items-center justify-between px-6 py-3 border-b-2">
+
             <div class="left">
                 <a href="/"><img class="h-[75px] object-cover" src="/images/baba shivbramhiji.png" alt=""></a>
             </div>
@@ -104,6 +98,7 @@
                     <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
                 </ul>
             </div>
+
         </nav>
         <div id="slidebar">
             <a href="/">Home</a>
@@ -128,7 +123,6 @@
                         Now <i class="ri-arrow-down-double-line"></i></button></a>
 
             </div>
-            <!-- Swiper -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
@@ -159,7 +153,6 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
-
             <div class="page-1-footer">
                 <div class="page-1-footer-item">
                     <img src="/images/icons/icons8-appointment-100.png" alt="">
@@ -214,7 +207,6 @@
                             Now</button></a>
                 </div>
             </div>
-
         </div>
         <div class="page-3">
             <div class="left ">
@@ -261,7 +253,7 @@
             </div>
         </div>
         <div class="pricing-page">
-            <h1 class="text-[30px] font-bold mb-6 text-[#16436A] font-bold">What We Do</h1>
+            <h1 class="text-[30px] font-bold mb-6 text-[#333333] font-bold">What We Do</h1>
             <div class="flex justify-center flex-wrap gap-8 ">
                 <div
                     class="w-[350px] h-[315px] border-2 rounded-lg bg-[#50C878] text-white flex flex-col justify-start items-center gap-3 pt-4 p-2">
@@ -444,8 +436,8 @@
                 </div>
             </footer>
         </div>
-    </div>
-    <div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
+</div>
+<div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
         <span>&#8593;</span>
     </div>
 
