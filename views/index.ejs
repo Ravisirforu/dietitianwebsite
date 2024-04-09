@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dietitian </title>
+    <title>babashivabramhiji</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -21,6 +21,7 @@
         width: 100%;
         height: 100%;
     }
+
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -29,6 +30,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .swiper-slide::after {
         content: "";
         display: block;
@@ -40,12 +42,14 @@
         background-color: #494949;
         opacity: 0.4;
     }
+
     .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
     @keyframes bounce {
 
         0%,
@@ -64,26 +68,34 @@
             transform: translateY(-15px);
         }
     }
+
     .bounce {
         animation: bounce 2s infinite;
     }
+
     .active-button {
         background-color: #F49C08 !important;
 
         transition: all ease 0.5s;
     }
+
     nav .right ul li a {
         transition: color 0.5s ease, transform 0.5s ease;
     }
+
     nav .right ul li a:hover {
         color: #50C878;
         transform: scale(1.1);
         text-decoration: none;
     }
+    .contract-button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
 </style>
 
 <body>
-<div class="main">
+    <div class="main">
         <nav class="flex items-center justify-between px-6 py-3 border-b-2">
 
             <div class="left">
@@ -94,7 +106,7 @@
                     <li class="text-[#333333] font-bold"><a href="/">Home</a></li>
                     <li class="text-[#333333] font-bold"><a href="/" id="about-btn">About</a></li>
                     <li class="text-[#333333] font-bold"><a href="/gallery">Gallery</a></li>
-                    <li class="text-[#333333] font-bold"><a href="/contact">Contact</a></li>
+                    <li class="text-[#333333] font-bold" id="contact-btn">Contact</li>
                     <li class="text-[#333333] font-bold"><a href="/login">Login</a></li>
                     <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
                 </ul>
@@ -103,9 +115,9 @@
         </nav>
         <div id="slidebar">
             <a href="/">Home</a>
-            <a href="/">About</a>
+            <a href="/" id="about-btn">About</a>
             <a href="/gallery">Gallery</a>
-            <a href="/contact">Contact</a>
+            <a href="/">Contact</a>
             <!-- <a href="/register">Register</a> -->
             <a href="/login">Login</a>
         </div>
@@ -175,7 +187,7 @@
             </div>
         </div>
         <div class="page-2">
-            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#50C878] leading-none">ABOUT US</h1>
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333333] leading-none">ABOUT US</h1>
             <div class="page-2-content">
                 <div class="left">
                     <img src="/images/dieticianClient.png" alt="">
@@ -313,6 +325,43 @@
 
             </div>
         </div>
+        <div class="contact-content">
+            <h1 class="text-3xl md:text-4xl  text-center font-bold mb-6">Contact Us</h1>
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="left md:w-1/2  text-white px-4">
+                    <h3 class="text-lg md:text-xl text-black text-center mb-4">Feel free to contact us for any queries
+                        or feedback👋</h3>
+                    <div class="bg-white h-80 p-4 rounded-md">
+                        <form action="https://sheetdb.io/api/v1/juzfb4aw0csl7" method="POST" id="sheetdb-form"
+                            class="flex flex-col  gap-8">
+                            <input type="text" name="data[name]" placeholder="Your Name"
+                                class="p-2 border rounded-md text-black" required>
+                            <input type="contact" name="data[contact]" placeholder="Your contact"
+                                class="p-2 border rounded-md text-black" required>
+                                <select name="data[service]" class="p-2 border rounded-md text-black" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Weight Loss">Weight Loss</option>
+                                    <option value="Weight Gain">Weight Gain</option>
+                                    <option value="Diabetic Diet">Diabetic Diet</option>
+                                    <option value="Other">Other</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            <textarea placeholder="Message" class="p-2 border rounded-md text-black" 
+                                name="data[message]"></textarea>
+                            <button type="submit"
+                                class="contract-button p-2 bg-[#50C878] font-semibold text-white rounded-md hover:bg-[#50C878] transition-colors">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right md:w-1/2 mt-4 md:mt-0">
+
+                    <iframe class="w-full h-96 md:h-[400px]"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14654.06221321371!2d79.80552024429957!3d23.333329416231855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b94d1daa2077%3A0xe6463b4949c9b68b!2sKarondi%2C%20Madhya%20Pradesh%20483113!5e0!3m2!1sen!2sin!4v1709634728112!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
         <div class="page-4 ">
             <div class="page-4-content">
 
@@ -378,7 +427,7 @@
 
             </div>
             <div class="sub-footer">
-                <div class="part-1">
+                <!-- <div class="part-1">
                     <h1>Locations</h1>
                     <div class="map-container flex flex-col gap-4 mt-2">
                         <div class="sm:w-[300px] md:w-[400px]">
@@ -393,27 +442,21 @@
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                </div>
-
+                </div> -->
+              
                 <div class="part-4">
                     <h1>Let's Talk</h1>
                     <ul>
-                        <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location1 ? admin.location1
-                                : 'Plot no 25/B Mla colony banjarahills Road no 12. Near: Citi Neuro Hospital Kalinga cultural Trust'
-                                %>
+                        <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location ? admin.location
+                                : 'Bhopal' %>
                         </li>
-                        <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location2 ? admin.location2
-                                : 'Plot no 124/A. Mla colony banjarahills Road no 12 Near CMM (Center for Migration Medicine)'
-                                %>
-                        </li>
-                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.contact1 ? admin.contact1
+
+                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.contact ? admin.contact
                                 : '78058 06867' %>
                         </li>
-                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.contact2 ? admin.contact2
-                                : '78058 06867' %>
-                        </li>
+
                         <li><i class="ri-mail-line"></i>&nbsp; <%= admin && admin.email ? admin.email
-                                : 'srikanth.mithrahomes@gmail.com' %>
+                                : 'atultiwaridietician@gmail.com' %>
                         </li>
 
                         <!-- 
@@ -427,7 +470,7 @@
             </div>
             <footer>
                 <div class="part-1">
-                    <h1>© 2024 Dietitian</h1>
+                    <h1>© 2024 babashivabramhiji.online</h1>
                 </div>
                 <div class="part-2">
                     <i class="ri-facebook-circle-fill"></i>
@@ -437,8 +480,8 @@
                 </div>
             </footer>
         </div>
-</div>
-<div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
+    </div>
+    <div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
         <span>&#8593;</span>
     </div>
 
@@ -450,6 +493,19 @@
             var aboutButton = document.getElementById("about-btn");
             var container = document.querySelector(".page-2");
             aboutButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                container.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+
+    <!-- Scroll to Contact page  JS -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contactButton = document.getElementById("contact-btn");
+            var container = document.querySelector(".contact-content");
+            contactButton.addEventListener("click", function (event) {
                 event.preventDefault();
                 container.scrollIntoView({ behavior: "smooth" });
             });
@@ -498,6 +554,30 @@
 
     <!-- Scroll to top JS -->
     <script src="/javascripts/scrollToTop.js"></script>
+
+    <script>
+        var form = document.querySelector("#sheetdb-form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(res => res.json())
+                .then((html) => {
+                    console.log("done");
+                    form.reset();
+                    alert("Your message has been sent")
+                    submitBtn.disabled = false;
+                }).catch(error => {
+                    alert("try again");
+                    console.error('Error submitting the form:', error);
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
 
 </body>
 

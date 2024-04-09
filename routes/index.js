@@ -28,11 +28,9 @@ router.get('/dashboard',isLoggedIn, async function(req,res,next){
     const admin = await userModel.findOneAndUpdate(
       { role: 'admin' },
       {
-        location1: req.body.location1,
-        location2: req.body.location2,
+        location: req.body.location,
         email: req.body.email,
-        contact1: req.body.contact1,
-        contact2: req.body.contact2,
+        contact: req.body.contact,
       },
       { new: true }
     );
